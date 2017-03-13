@@ -96,9 +96,9 @@ class Project extends AbstractObject {
      *
      * @return mixed
      */
-    public function timeTotal()
+    public function timeTotal($options = [])
     {
-        return $this->client->get("$this->endpoint/$this->id/time/total")->response();
+        return $this->client->get("$this->endpoint/$this->id/time/total", $options)->response();
     }
 
     /**
