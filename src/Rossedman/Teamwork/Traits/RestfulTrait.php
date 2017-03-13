@@ -5,9 +5,9 @@ trait RestfulTrait {
     /**
      * @return mixed
      */
-    public function all()
+    public function all($options = [])
     {
-        return $this->client->get($this->endpoint)->response();
+        return $this->client->get($this->endpoint, $options)->response();
     }
 
     /**
